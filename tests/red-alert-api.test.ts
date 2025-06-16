@@ -73,7 +73,7 @@ describe('RedAlertAPI', () => {
     });
 
     it('should handle API errors gracefully', async () => {
-      mockedAxios.get.mockRejectedValue(new Error('Network error'));
+      mockedAxios.get.mockImplementation(() => Promise.reject('Network error'));
 
       await expect(api.getCurrentAlerts()).rejects.toThrow('Network error');
     });

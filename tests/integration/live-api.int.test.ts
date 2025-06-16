@@ -4,12 +4,20 @@
  * Set environment variable LIVE_TEST=true to enable.
  * The test is skipped by default so CI can run offline.
  */
+// Disable the automatic manual mock for axios in this file so we hit the real network when LIVE_TEST=true
+jest.unmock('axios');
+jest.unmock('axios-cookiejar-support');
+
 import { RedAlertAPI } from '../../src/red-alert-api';
 
 const runLive = process.env.LIVE_TEST === 'true';
 
 (runLive ? describe : describe.skip)('Integration: Live RedAlertAPI', () => {
-  const api = new RedAlertAPI();
+  let api: RedAlertAPI;
+
+  beforeAll(() => {
+    api = new RedAlertAPI();
+  });
 
   afterAll(() => {
     api.close();
