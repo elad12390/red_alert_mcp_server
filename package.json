@@ -43,6 +43,8 @@
     "format": "prettier --write \"src/**/*.ts\" \"tests/**/*.ts\"",
     "format:check": "prettier --check \"src/**/*.ts\" \"tests/**/*.ts\"",
     "clean": "rm -rf dist",
+    "deploy": "npm run clean && npm run build && npm test && npm run lint && npm version patch && npm publish --access public",
+    "prepare": "npm run build && chmod +x dist/index.js",
     "prepublishOnly": "npm run clean && npm run build && npm run test && npm run lint",
     "demo": "ts-node examples/demo.ts",
     "example": "ts-node examples/usage-examples.ts"
