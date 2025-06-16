@@ -129,7 +129,7 @@ $ LIVE_TEST=true npm test -- tests/integration/live-api.int.test.ts
 
 ## ⚖️ License
 
-MIT © 2023-present YOUR_NAME
+MIT © 2023-present Elad Ben-Haim
 
 ---
 
