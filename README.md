@@ -32,7 +32,7 @@ It wraps the semi-official JSON endpoints behind the Home-Front Command public w
 
 ```bash
 # 1. Clone the repo
-$ git clone https://github.com/YOUR_USER/red_alert_mcp_server.git
+$ git clone https://github.com/elad12390/red_alert_mcp_server.git
 $ cd red_alert_mcp_server
 
 # 2. Install dependencies
@@ -129,7 +129,7 @@ $ LIVE_TEST=true npm test -- tests/integration/live-api.int.test.ts
 
 ## ⚖️ License
 
-MIT © 2023-present YOUR_NAME
+MIT © 2023-present Elad Ben-Haim
 
 ---
 
