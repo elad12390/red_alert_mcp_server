@@ -1,0 +1,53 @@
+{
+  "name": "@elad12390/red-alert-mcp",
+  "version": "2.0.1",
+  "description": "MCP server for the Israeli Red Alert system (Pikud ha-oref / Home Front Command). Real-time rocket and missile alert monitoring for Israel. Query active alerts, check by city or region, get alert history, and receive notifications for ongoing security events. Triggers: red alert, tzeva adom, Israeli alerts, pikud haoref, rocket alerts Israel, missile alert, Israel security alerts, civil defense alerts.",
+  "permissions": {
+    "network": {
+      "outbound": [
+        "www.oref.org.il"
+      ]
+    },
+    "filesystem": {
+      "read": [
+        "**/*"
+      ],
+      "write": []
+    },
+    "subprocess": true
+  },
+  "repository": "https://github.com/elad12390/red_alert_mcp_server",
+  "atoms": [
+    {
+      "kind": "tool",
+      "name": "red-alert-mcp",
+      "extensions": {
+        "claude-code": {
+          "command": "npx",
+          "args": [
+            "-y",
+            "github:elad12390/red_alert_mcp_server"
+          ]
+        },
+        "opencode": {
+          "command": "npx",
+          "args": [
+            "-y",
+            "github:elad12390/red_alert_mcp_server"
+          ]
+        },
+        "cursor": {
+          "command": "npx",
+          "args": [
+            "-y",
+            "github:elad12390/red_alert_mcp_server"
+          ]
+        }
+      }
+    },
+    {
+      "kind": "instruction",
+      "content": "./SKILL.md"
+    }
+  ]
+}
